@@ -1,0 +1,4 @@
+PascalCase -> digunakan untuk penamaan nama class
+camelCase -> digunakan untuk penamaan variable dan function
+snake_case -> digunakan untuk penamaan field/column pada table sebuah database
+UPPER_SNAKE_CASE -> digunakan untuk penamaan nilai konstanta

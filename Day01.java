@@ -29,5 +29,6 @@ public class Day01 {
         
         String word = "novend";
         System.out.println(word.charAt(4));
+        
     }
 }
