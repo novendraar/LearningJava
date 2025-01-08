@@ -67,8 +67,8 @@ public class HitungMain {
         
         //Hitung Luas & Keliling JajarGenjang dengan menggunakan argumen di instance 
         Lingkaran lingkaran = new Lingkaran(6);
-        System.out.println("Hasil Luas Lingkaran: " + lingkaran.Luas());
-        System.out.println("Hasil Keliling Lingkaran: " + lingkaran.Keliling());
+        System.out.printf("Hasil Luas Lingkaran: %.2f \n", lingkaran.Luas());
+        System.out.printf("Hasil Keliling Lingkaran: %.2f \n", lingkaran.Keliling());
 
         System.out.println();
 
