@@ -3,8 +3,8 @@ package com.pembekalan.xsisacademy.controller.dto.request;
 import lombok.Data;
 
 @Data
-public class PublisherRequest {
+public class AuthorsRequest {
     private Integer id;
     private String name;
-    private String address;
+    private Integer publishedBooks;
 }

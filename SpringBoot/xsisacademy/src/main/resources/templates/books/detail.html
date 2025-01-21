@@ -1,0 +1,61 @@
+<form th:object="${books}">
+  <input type="hidden" name="id" id="id" th:field="*{id}" />
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      name="title"
+      id="title"
+      th:field="*{title}" />
+  </div>
+  <div class="mb-3">
+    <label for="synopsis" class="form-label">Synopsis</label>
+    <input
+      class="form-control"
+      id="synopsis"
+      name="synopsis"
+      type="text"
+      th:field="*{synopsis}"></input>
+  </div>
+  <div class="mb-3">
+    <label for="stock" class="form-label">Stock</label>
+    <input
+      class="form-control"
+      id="stock"
+      name="stock"
+      type="text"
+      th:field="*{stock}"></input>
+  </div>
+  <div class="mb-3">
+    <label for="authorsName" class="form-label">Authors Name</label>
+    <input
+      class="form-control"
+      id="authorsName"
+      name="authorsName"
+      type="text"
+      th:field="*{authorsName}"></input>
+  </div>
+  <div class="mb-3">
+    <label for="categoryName" class="form-label">Category Name</label>
+    <input
+      class="form-control"
+      id="categoryName"
+      name="categoryName"
+      type="text"
+      th:field="*{categoryName}"></input>
+  </div>
+  <div class="mb-3">
+    <label for="publisherName" class="form-label">Publisher Name</label>
+    <input
+      class="form-control"
+      id="publisherName"
+      name="publisherName"
+      type="text"
+      th:field="*{publisherName}"></input>
+  </div>
+
+  <button type="submit" class="btn btn-primary" style="float: right">
+    Save
+  </button>
+</form>

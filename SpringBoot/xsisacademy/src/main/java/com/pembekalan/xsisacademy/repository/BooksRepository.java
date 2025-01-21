@@ -6,10 +6,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.pembekalan.xsisacademy.entity.Category;
+import com.pembekalan.xsisacademy.entity.Books;
 
 @Repository
-public interface CategoryRepository extends JpaRepository<Category, Integer> {
-    @Query(value = "select c from Category c order by c.name desc")
-    List<Category> getAllCategories();
+public interface BooksRepository extends JpaRepository<Books, Integer> {
+    @Query(value = "select c from Books c order by c.title asc")
+    List<Books> getAllBooks();
 }

@@ -25,7 +25,7 @@ public class PublisherServiceImpl implements PublisherService {
 
     @Override
     public List<PublisherResponse> getAllPublishers() {
-        List<Publisher> publishers = publisherRepository.findAll();
+        List<Publisher> publishers = publisherRepository.getAllPublishers();
         List<PublisherResponse> publisherResponses = publishers.stream()
                 .map(publisher -> modelMapper().map(publisher, PublisherResponse.class)).collect(Collectors.toList());
         return publisherResponses;

@@ -16,5 +16,4 @@ public interface PublisherService {
     PublisherResponse updatePublisher(PublisherResponse publisherResponse, PublisherRequest publisherRequest);
 
     void deletePublisherById(Integer id);
-
 }

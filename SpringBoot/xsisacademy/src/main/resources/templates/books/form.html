@@ -1,0 +1,82 @@
+<form th:action="@{~/books/save}" th:object="${bookResponse}" method="post">
+  <input type="hidden" name="id" id="id" th:field="*{id}" />
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      name="title"
+      id="title"
+      th:field="*{title}" />
+  </div>
+  <div class="mb-3">
+    <label for="synopsis" class="form-label">Synopsis</label>
+    <input
+      class="form-control"
+      id="synopsis"
+      name="synopsis"
+      type="text"
+      th:field="*{synopsis}" />
+  </div>
+  <div class="mb-3">
+    <label for="stock" class="form-label">Stock</label>
+    <input
+      class="form-control"
+      id="stock"
+      name="stock"
+      type="number"
+      th:field="*{stock}" />
+  </div>
+  <div class="mb-3">
+    <label for="published_at" class="form-label">Tanggal Rilis</label>
+    <input
+      class="form-control"
+      id="published_at"
+      name="published_at"
+      type="date"
+      th:field="*{published_at}" />
+  </div>
+  <div class="mb-3">
+    <label for="authorsName" class="form-label">Authors Name</label>
+    <select th:field="*{authorId}" class="form-select">
+      <option value="" th:selected="*{authorId} == null">
+        ← Pilih Salah Satu →
+      </option>
+      <option
+        th:each="author : ${author}"
+        th:value="${author.id}"
+        th:text="${author.name}"
+        th:selected="*{authorId} == ${author.id}"></option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="categoryName" class="form-label">Category Name</label>
+    <select th:field="*{categoryId}" class="form-select">
+      <option value="" th:selected="*{categoryId} == null">
+        ← Pilih Salah Satu →
+      </option>
+      <option
+        th:each="category : ${category}"
+        th:value="${category.id}"
+        th:text="${category.name}"
+        th:selected="*{categoryId} == ${category.id}"></option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="publisherName" class="form-label">Publisher Name</label>
+    <select th:field="*{publisherId}" class="form-select">
+      <option value="" th:selected="*{publisherId} == null">
+        ← Pilih Salah Satu →
+      </option>
+      <option
+        th:each="publisher : ${publisher}"
+        th:value="${publisher.id}"
+        th:text="${publisher.name}"
+        th:selected="*{publisherId} == ${publisher.id}"></option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary" style="float: right">
+    Save
+  </button>
+</form>
